@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        中正高中資研社宣傳單
+    </title>
+    <head>
+        <span id="head">
+            中正高中資研社
+        </span>
+        <style>
+            #head{
+                font-size: 10em;
+                color: red;
+            }
+            #body div{
+                word-wrap: break-word;
+                border: 1px red solid;
+                width: 500px;
+            }
+            #run{
+                position: absolute;
+                border: 1px red solid;
+                height: 10000cm;
+                top: 0px;
+                left: 0px;
+                max-width: 1438px;
+                min-width: 1438px;
+            }
+            #safe{
+                position: absolute;
+                border: 1px red solid;
+                background-color: aqua;
+                max-width: 1438px;
+                min-width: 1438px;
+                top: 10000cm;
+                left: 0px;
+                height: 823px;
+                word-wrap: break-word;
+                text-align: center;
+            }
+            #c{
+                position: absolute;
+                text-align: center;
+                max-width: 1438px;
+                min-width: 1438px;
+                left: 0px;
+            }
+            #l{
+                position: absolute;
+                text-align: center;
+                max-width: 1438px;
+                min-width: 1438px;
+                top: 350px;
+            }
+            ::-webkit-scrollbar{
+                display: none;
+            }
+        </style>
+    </head>
+    <br><br><br><br><br>
+    <body id="body">
+        <div>
+            <div>
+                社團名稱
+            </div>
+            <div>
+                資訊研究社(第24.75屆)
+            </div>
+        </div>
+        <div>
+            <div>
+                成立中指
+            </div>
+            <div>
+                城市設計在人體科學當中扮演著雞礎且重要的摔腳色，社團將以「多元性向檢測」（FxxK）為目標，透過觀念學習及上床實作，逐步強化運算思維與程式設計技巧，並鼓勵社員參與實驗，豐富學習歷程，歡迎對資訊科學、程式設計有興趣的同學不要加入！
+            </div>
+        </div>
+        <div>
+            <div>
+                限制大小
+            </div>
+            <div>
+                400000000
+            </div>
+        </div>
+        <div>
+            <div>
+                生活罩
+            </div>
+            <div>
+                <img src="2024-08-08 23 07 48.png" style="width: 500px;">
+            </div>
+        </div>
+    </body>
+    <body>
+        <div id="run" onmouseenter="javascript:chase()" style="border: 0px;">
+
+        </div>
+        <div id="c" style="border: 0px; top:0px;" onmouseenter="javascript:die()">
+            <img src="2024-08-10 21 01 52.png" style="width: 300px;">
+        </div>
+        <div id="safe">
+            <span style="font-size: 20em;" onmouseenter="javascript:z()">
+                safe zone!!!
+            </span>
+        </div>
+        <div id="l" style="border: 0px;">
+            <span style="font-size: 3em;">
+                往下滑逃跑!!!
+                <br>
+                | | |
+                <br>
+                v v v
+            </span>
+        </div>
+    </body>
+</html>
+<script>
+    function time(){
+        let h=document.getElementById("c").style.top;
+        h=h.substring(0,h.length-2);
+        h=eval(h);
+        document.getElementById("c").style.top=h+50+"px";
+    }
+    function chase(){
+        let t=window.setInterval(time,1);
+    }
+    function die(){
+        document.getElementById("c").style.top="0px";
+        location.href="youdie.html";
+    }
+    function z(){
+        location.href="fourevent.html";
+    }
+</script>
