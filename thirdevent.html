@@ -52,15 +52,6 @@
                 min-width: 1438px;
                 top: 350px;
             }
-            #q{
-                border: 1px red solid;
-                position: absolute;
-                height: 5cm;
-                max-width: 10cm;
-                min-width: 10cm;
-                top: 33cm;
-                right: 35cm;
-            }
             ::-webkit-scrollbar{
                 display: none;
             }
@@ -102,10 +93,7 @@
         </div>
     </body>
     <body>
-        <div id="q">
-
-        </div>
-        <div id="run" onmouseenter="javascript:chase()" style="border: 0px;">
+        <div id="run" onmouseenter="javascript:timeout()" style="border: 0px;">
 
         </div>
         <div id="c" style="border: 0px; top:0px;" onmouseenter="javascript:die()">
@@ -128,6 +116,9 @@
     </body>
 </html>
 <script>
+    function timeout(){
+        setTimeout(chase,1000);
+    }
     function time(){
         let h=document.getElementById("c").style.top;
         h=h.substring(0,h.length-2);
